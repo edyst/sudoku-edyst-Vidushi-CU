@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </head>
+  <body>
+      <header>
+        <div>
+          <button class="btn btn-1" active>Easy</button>
+          <button class="btn btn-2">Medium</button>
+          <button class="btn btn-3">Hard</button>
+        </div>
+      </header>
+      <main>
+          <div>
+              <table>
+                  <tbody>
+                      <tr id="r1">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"  value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r2">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r3">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r4">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r5">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r6">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r7">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r8">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                      <tr id="r9">
+                          <td id="d1"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d2"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d3"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d4"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d5"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d6"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d7"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d8"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                          <td id="d9"><input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" value="" class="ipt" maxlength="1" max="9" min="1"></td>
+                      </tr>
+                  </tbody>
+              </table>  
+          </div>
+      </main>
+      <footer>
+        <button id="solution" class="btn">Solution</button>
+        <button id="Reset" class="btn" >Reset</button>
+        <button id="validate" class="btn" >Validate</button>
+      </footer>
+      <script src="script.js"></script>
+  </body>
+</html>
